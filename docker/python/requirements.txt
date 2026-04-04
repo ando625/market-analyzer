@@ -1,0 +1,11 @@
+fastapi==0.115.0
+uvicorn==0.30.0
+httpx==0.27.0
+
+# スクレイピング用
+beautifulsoup4==4.12.3   # HTMLを解析する道具
+requests==2.32.3          # WebページのHTMLを取得する道具
+lxml==5.2.2               # HTMLの解析を速くするライブラリ
+
+# 環境変数を読み込む
+python-dotenv==1.0.1
