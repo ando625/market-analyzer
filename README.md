@@ -210,8 +210,8 @@ price-tracker/
 ### 手順1 : リポジトリをクローン
  
 ```bash
-git clone <リポジトリURL>
-cd price-tracker
+git clone git@github.com:ando625/market-analyzer.git
+cd market-analyzer
 ```
  
 ---
