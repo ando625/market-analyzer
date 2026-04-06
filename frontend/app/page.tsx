@@ -184,8 +184,10 @@ export default function Home() {
                     )}
                 </div>
 
-                {/* カテゴリカードエリア */}
                 {/* 🗂️ カテゴリカードエリア */}
+                <div className="mb-2">
+                    <h2 className="text-gray-600 font-bold">カテゴリカード</h2>
+                </div>
                 <section className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {categories.map((cat) => {
                         const stat = cat.stats[0];
