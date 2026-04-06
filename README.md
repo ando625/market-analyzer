@@ -16,7 +16,7 @@
 カテゴリ別の平均価格・在庫数・評価をグラフで可視化し、**「評価が高くて価格が安い掘り出し物カテゴリ」**を自動で抽出して表示します。
 
 
-- https://github.com/user-attachments/assets/f289ab80-2c50-4f79-9e51-89b96c678baf
+- https://github.com/user-attachments/assets/634f4dad-4c8c-4386-aff0-8d6566447310
 ---
 
 ### **## 開発の背景**
