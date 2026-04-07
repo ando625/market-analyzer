@@ -120,7 +120,7 @@ export default function Home() {
                             <ResponsiveContainer width="100%" height="100%">
                                 <BarChart data={chartData}>
                                     <XAxis dataKey="name" hide />
-                                    <Tooltip formatter={(value) => `¥${value.toLocaleString()}`} />
+                                    <Tooltip formatter={(value) => `¥${Number(value).toLocaleString()}`} />
                                     <Bar dataKey="price" fill="#3b82f6" radius={[4, 4, 0, 0]} />
                                 </BarChart>
                             </ResponsiveContainer>
@@ -137,7 +137,7 @@ export default function Home() {
                             <ResponsiveContainer width="100%" height="100%">
                                 <BarChart data={chartData}>
                                     <XAxis dataKey="name" hide />
-                                    <Tooltip formatter={(value) => `${value} 冊`} />
+                                    <Tooltip formatter={(value) => `${Number(value)} 冊`} />
                                     <Bar dataKey="count" fill="#10b981" radius={[4, 4, 0, 0]} />
                                 </BarChart>
                             </ResponsiveContainer>
@@ -155,7 +155,7 @@ export default function Home() {
                                 <BarChart data={chartData}>
                                     <XAxis dataKey="name" hide />
                                     <YAxis domain={[0, 5]} hide />
-                                    <Tooltip formatter={(value) => `★ ${value.toFixed(1)}`} />
+                                    <Tooltip formatter={(value) => `★ ${Number(value).toFixed(1)}`} />
                                     <Bar dataKey="rating" fill="#f59e0b" radius={[4, 4, 0, 0]} minPointSize={5} />
                                 </BarChart>
                             </ResponsiveContainer>
