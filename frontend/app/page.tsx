@@ -196,7 +196,7 @@ export default function Home() {
                                 <div className="flex justify-between items-start mb-4">
                                     <h3 className="font-bold text-lg text-slate-800 group-hover:text-blue-600 transition-colors">{cat.name}</h3>
                                     <span className="text-xs font-medium bg-slate-100 px-2 py-1 rounded text-slate-500">
-                                        {stat?.total_count || 0} items
+                                        ¥{stat ? stat.average_price.toLocaleString() : "0"} items
                                     </span>
                                 </div>
                                 
@@ -210,7 +210,7 @@ export default function Home() {
                                             <Star size={14} className="text-yellow-500 fill-yellow-500" />
                                             平均評価
                                         </span>
-                                        <span className="font-bold">{stat?.average_rating.toFixed(1) || "0.0"}</span>
+                                        <span className="font-bold">{stat ? stat.average_rating.toFixed(1) : "0.0"}</span>
                                     </div>
                                 </div>
                                 

@@ -238,7 +238,7 @@ DB_DATABASE=price_tracker_db
 DB_USERNAME=tracker_user
 DB_PASSWORD=tracker_pass
 ```
- 
+### pythonフォルダの中にも .env ファイルを作成
 ---
  
 ### 手順4 : Dockerコンテナを起動
