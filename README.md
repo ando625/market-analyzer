@@ -274,7 +274,13 @@ DB_PASSWORD=tracker_pass
  
 ```bash
 composer install
+```
+
+```
 php artisan key:generate
+```
+
+```
 php artisan migrate:fresh
 ```
  
@@ -287,13 +293,17 @@ php artisan migrate:fresh
 ```env
 NEXT_PUBLIC_API_URL=http://localhost/api
 ```
- 
- ```bash
-cd frontend
-npm install
-```
 
- 
+
+> ⚠️ **`npm install` は絶対にやらないでください（Mac・Windows・Linux共通）**
+> `docker-compose.yml` の `command` でコンテナ起動時に自動で実行されます。
+> Mac上やWindows上で手動で実行すると、OS用のパッケージが入ってしまい
+> DockerのLinux環境で動かなくなります。
+
+~~cd frontend~~
+~~npm install~~
+
+---
 ### 手順7 : アクセス確認
  
 | サービス | URL |
