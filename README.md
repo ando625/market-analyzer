@@ -216,8 +216,21 @@ cd market-analyzer
 ```
  
 ---
-
-### 手順2 : プロジェクトルートに .env を作成
+ 
+### 手順2 : node_modules と .next を削除する
+ 
+> ⚠️ この手順はクローン直後に必ず実行してください。
+> MacとDockerコンテナではCPUの種類が異なるため、Mac上に残った `node_modules` をそのままDockerで使うとエラーが起きます。
+> コンテナ起動時に自動で正しいものが入るので、先に削除しておく必要があります。
+ 
+```bash
+rm -rf frontend/node_modules
+rm -rf frontend/.next
+```
+ 
+---
+ 
+### 手順3 : プロジェクトルートに .env を作成
  
 ```env
 DB_ROOT_PASSWORD=rootpassword
@@ -225,11 +238,10 @@ DB_DATABASE=price_tracker_db
 DB_USERNAME=tracker_user
 DB_PASSWORD=tracker_pass
 ```
-### pythonフォルダにも　.envのファイルを作成
-中身は設定せず（dockerが立ち上がらないのでファイルがないと）
+ 
 ---
  
-### 手順3 : Dockerコンテナを起動
+### 手順4 : Dockerコンテナを起動
  
 ```bash
 docker compose up -d --build
@@ -237,7 +249,7 @@ docker compose up -d --build
  
 ---
  
-### 手順4 : Laravel の初期設定
+### 手順5 : Laravel の初期設定
  
 ```bash
 # phpコンテナに入る
@@ -268,7 +280,7 @@ php artisan migrate:fresh
  
 ---
  
-### 手順5 : Next.js の初期設定
+### 手順6 : Next.js の初期設定
  
 `frontend` フォルダ直下に `.env.local` を新規作成し、以下を書き込んでください。
  
@@ -276,14 +288,13 @@ php artisan migrate:fresh
 NEXT_PUBLIC_API_URL=http://localhost/api
 ```
  
-```bash
+ ```bash
 cd frontend
 npm install
 ```
+
  
----
- 
-### 手順6 : アクセス確認
+### 手順7 : アクセス確認
  
 | サービス | URL |
 |----------|-----|
@@ -294,13 +305,14 @@ npm install
  
 ---
  
-### 手順7 : データを取得する
+### 手順8 : データを取得する
  
 ブラウザで http://localhost:3000 を開き、**「市場分析を開始する」ボタン** を押すと全カテゴリのスクレイピングが始まります。
  
 > ⚠️ 初回はすべてのカテゴリを巡回するため、数分かかります。  
 > ✅ Pythonコンテナが起動してから約15秒後に、バックグラウンドでも自動的に最初のスクレイピングが始まります。
  
+
 ---
  
 ## API一覧
