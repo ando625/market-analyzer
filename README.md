@@ -216,7 +216,7 @@ cd market-analyzer
 ```
  
 ---
- 
+
 ### 手順2 : プロジェクトルートに .env を作成
  
 ```env
@@ -225,7 +225,8 @@ DB_DATABASE=price_tracker_db
 DB_USERNAME=tracker_user
 DB_PASSWORD=tracker_pass
 ```
- 
+### pythonフォルダにも　.envのファイルを作成
+中身は設定せず（dockerが立ち上がらないのでファイルがないと）
 ---
  
 ### 手順3 : Dockerコンテナを起動
